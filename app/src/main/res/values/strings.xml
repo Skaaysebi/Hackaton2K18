@@ -6,4 +6,40 @@
     <string name="title_activity_jobs">JobsActivity</string>
     <string name="title_activity_job_deteil">JobDeteilActivity</string>
     <string name="title_activity_free">Map</string>
+
+//Für FirstOpenSwipeActivity
+
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Herzlich Willkommen !</string>
+    <string name="slide_1_desc">Glückwunsch, du bist nun ein stolzer WüRGer und sind nun in der Lage mit anderen WüRGern in Verbindung zu treten.</string>
+
+    <string name="slide_2_title">Lust auf eine gute Tat ?!</string>
+    <string name="slide_2_desc">Weg von dem Sofa, rein in die Stadt. Mit unserem Challenge System hast du immer was zu tun und wirst dazu noch belohnt!</string>
+
+    <string name="slide_3_title">Coole Leute kennenlernen ?!</string>
+    <string name="slide_3_desc">Triff dich mit Leuten aus deiner Stadt. Im echten Leben, ja, im Echten !</string>
+
+    <string name="slide_4_title">Was geht ?!</string>
+    <string name="slide_4_desc">Keine Lust den Abend vor dem Fernseher zu sitzen ? Schau doch mal in unsere Eventvorschläge ! </string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="title_activity_main">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
 </resources>
