@@ -125,7 +125,7 @@ public class APIConnector {
     public static List<Job> getAllJobsForUser(String uId){
         List<Job> jobs = getAllJobs();
         if (jobs == null)
-            return new ArrayList<>();
+            return new ArrayList<Job>();
 
         List<Job> outputJob = new ArrayList<>();
         for(Job job : jobs){

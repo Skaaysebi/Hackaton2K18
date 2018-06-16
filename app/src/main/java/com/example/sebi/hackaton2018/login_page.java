@@ -53,15 +53,13 @@ public class login_page extends AppCompatActivity {
     private void initFields() {
         username = findViewById(R.id.usernameField);
         password = findViewById(R.id.passwortField);
-        cardId = findViewById(R.id.cardNumberField);
     }
 
     public void signin(View view) {
         String userNameString = username.getText().toString();
         String passWordString = password.getText().toString();
-        String cardIdString = cardId.getText().toString();
 
-        User user = new User(userNameString, passWordString, cardIdString);
+        User user = new User(userNameString, passWordString, "1u1huz13g61371");
         //User foundUser = APIConnector.getUserFromDB(user);
         User foundUser = DummyCreator.getUser();
         if(foundUser == null) {
