@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private TextView username;
     private TextView password;
+    private TextView cardId;
     private TextView showError;
 
     @Override
@@ -58,14 +59,17 @@ public class LoginActivity extends AppCompatActivity {
     private void initFields() {
         //username = findViewById(R.id.username);
         //password = findViewById(R.id.password);
+        //cardId = findViewById(R.id.cardIddingsblabla)
         //showError = findViewById(R.id.showError);
     }
 
     public void checkOut(View view){
         String userNameString = (String) username.getText();
         String passWordString = (String) password.getText();
+        String cardId = (String) this.cardId.getText();
 
-        User user = new User(userNameString, passWordString);
+
+        User user = new User(userNameString, passWordString, cardId);
         User foundUser = APIConnector.getUserFromDB(user);
         if(foundUser == null) {
             //Set Error message

@@ -29,4 +29,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation files('src/main/java/Model/JARs/okhttp-3.10.0.jar')
     implementation files('src/main/java/Model/JARs/genson-1.4.jar')
+    implementation files('src/main/java/Model/JARs/okio-1.14.1.jar')
 }

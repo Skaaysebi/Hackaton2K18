@@ -1,34 +1,35 @@
 package Model;
 
 public class Room {
+    private String roomId;
     private String title;
-    private String location;
-    private String id;
     private int size;
+    private String location;
     private String responsiblePerson;
     private String description;
-    private User user;
-    private int price;
+    private User booker;
+    private int cost;
 
-    public Room(String title, String location, String id, int size, String responsiblePerson, String description, User user, int price) {
-        this.title = title;
-        this.location = location;
-        this.id = id;
-        this.size = size;
-        this.responsiblePerson = responsiblePerson;
-        this.description = description;
-        this.user = user;
-        this.price = price;
+    public Room() {
     }
 
-    public Room(String title, String location, String id, int size, String responsiblePerson, String description, User user) {
+    public Room(String roomId, String title, int size, String location, String responsiblePerson, String description, User booker, int cost) {
+        this.roomId = roomId;
         this.title = title;
-        this.location = location;
-        this.id = id;
         this.size = size;
+        this.location = location;
         this.responsiblePerson = responsiblePerson;
         this.description = description;
-        this.user = user;
+        this.booker = booker;
+        this.cost = cost;
+    }
+
+    public String getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
     }
 
     public String getTitle() {
@@ -39,28 +40,20 @@ public class Room {
         this.title = title;
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public int getSize() {
         return size;
     }
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public String getResponsiblePerson() {
@@ -79,19 +72,21 @@ public class Room {
         this.description = description;
     }
 
-    public User getUser() {
-        return user;
+    public User getBooker() {
+        return booker;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setBooker(User booker) {
+        this.booker = booker;
     }
 
-    public int getPrice() {
-        return price;
+    public int getCost() {
+        return cost;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setCost(int cost) {
+        this.cost = cost;
     }
+
+
 }

@@ -9,20 +9,23 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import Model.Room;
 import Model.User;
+import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class APIConnector {
-    private static String url = "localhost:8080/api";
+    private static String url = "http://10.0.2.2:8080/api";
 
     public static User getUserFromDB(User user) {
         OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(url)
-                .addHeader("username", user.getUsername())
-                .addHeader("password", user.getPassword())
+        Request request = new Request.Builder().post(new FormBody.Builder().build())
+                .url(url + "/register")
+                .addHeader("username", user.getUserName())
+                .addHeader("password", user.getUserPassword())
+                .addHeader("cardid", user.getCardId())
                 .build();
         Response response = null;
         try {
@@ -36,7 +39,7 @@ public class APIConnector {
         User foundUser = null;
         try {
             if(response.body() != null) {
-                foundUser = new Genson().deserialize(response.body().toString(), User.class);
+                foundUser = new Genson().deserialize(response.body().string(), User.class);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -44,11 +47,10 @@ public class APIConnector {
         return foundUser;
     }
 
-    public static List<User> getAllRooms() {
-        url = url + "/rooms";
+    public static List<Room> getAllRooms() {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url(url).build();
+                .url(url + "/rooms").get().build();
         Response response = null;
         try {
             response = client.newCall(request).execute();
@@ -58,10 +60,10 @@ public class APIConnector {
         if(response == null){
             return null;
         }
-        ArrayList<User> foundUsers = null;
+        ArrayList<Room> foundUsers = null;
         try {
             if(response.body() != null) {
-                foundUsers = new Genson().deserialize(response.body().toString(), new GenericType<ArrayList<User>>() {});
+                foundUsers = new Genson().deserialize(response.body().string(), new GenericType<ArrayList<Room>>() {});
             }
         } catch (Exception e) {
             e.printStackTrace();

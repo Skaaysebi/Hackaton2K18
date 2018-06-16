@@ -1,55 +1,54 @@
 package Model;
 
 public class User {
-    private String username;
-    private String password;
+    private String userId;
+    private String userName;
+    private String userPassword;
     private String cardId;
-    private boolean isAdmin;
-    private int amount;
+    private int credit;
+    private boolean isSuperuser;
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
+    public User () {
+
     }
 
-    public User(String username, String password, String cardId, boolean isAdmin, int amount) {
-        this.username = username;
-        this.password = password;
+    public User(String userName, String userPassword, String cardId) {
+        this.userName = userName;
+        this.userPassword = userPassword;
         this.cardId = cardId;
-        this.isAdmin = isAdmin;
-        this.amount = amount;
     }
 
-    public boolean isAdmin() {
-        return isAdmin;
+    public User(String userId, String userName, String userPassword, String cardId, int credit, boolean isSuperuser) {
+        this.userId = userId;
+        this.userName = userName;
+        this.userPassword = userPassword;
+        this.credit = credit;
+        this.isSuperuser = isSuperuser;
+        this.cardId = cardId;
     }
 
-    public void setAdmin(boolean admin) {
-        isAdmin = admin;
+    public String getUserId() {
+        return userId;
     }
 
-    public int getAmount() {
-        return amount;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getUsername() {
-        return username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
     public String getCardId() {
@@ -58,5 +57,21 @@ public class User {
 
     public void setCardId(String cardId) {
         this.cardId = cardId;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public boolean isSuperuser() {
+        return isSuperuser;
+    }
+
+    public void setSuperuser(boolean superuser) {
+        isSuperuser = superuser;
     }
 }
