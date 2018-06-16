@@ -21,14 +21,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:scaleX="1"
+            android:scaleY="1"
+            app:srcCompat="@mipmap/earn_Buttonwtew" />
 
         <ImageButton
             android:id="@+id/ausgeben_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/ic_launcher" />
+            app:srcCompat="@mipmap/free_Button_name" />
 
         <ImageButton
             android:id="@+id/free_bottom"

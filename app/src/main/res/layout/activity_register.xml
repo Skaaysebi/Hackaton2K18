@@ -9,38 +9,64 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_height="464dp"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/usernameField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Name" />
+                android:hint="Name"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="18sp" />
 
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Passwort"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="18sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/cardNumberField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Kartennummer" />
+                android:hint="Kartennummer"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
 
         <ImageButton
@@ -51,54 +77,66 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/adressField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Straße und Hausnummer" />
+                android:hint="Straße und Hausnummer"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/passwortEingabeField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Passwort eingeben" />
+                android:hint="Passwort eingeben"
+                android:textColor="@android:color/black"
+                android:textColorHint="t"
+                android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
             <android.support.design.widget.TextInputEditText
                 android:id="@+id/passwortbestaetigenField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Passwort bestätigen" />
+                android:hint="Passwort bestätigen"
+                android:textColor="@android:color/black"
+                android:textColorHint="te"
+                android:textSize="18sp" />
         </android.support.design.widget.TextInputLayout>
 
         <CheckBox
             android:id="@+id/datenschutzCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ich stimme den Datenschutz Richtlinien zu und verkaufe meine Seele" />
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Ich stimme den Datenschutz Richtlinien zu" />
 
         <Button
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registrieren" />
+            android:padding="10dp"
+            android:text="Registrieren"
+            android:textSize="18sp" />
 
     </LinearLayout>
+    <include layout="@layout/hintergrund"/>
 </android.support.constraint.ConstraintLayout>
