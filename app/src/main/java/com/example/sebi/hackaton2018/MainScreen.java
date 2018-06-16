@@ -1,5 +1,6 @@
 package com.example.sebi.hackaton2018;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,7 +21,7 @@ public class MainScreen extends AppCompatActivity {
     }
 
     public void switchToJobs(View view){
-        Intent intent = new Intent(this, JobsActivity.class);
+        Intent intent = new Intent(this, joboverview_page.class);
         startActivity(intent);
     }
 

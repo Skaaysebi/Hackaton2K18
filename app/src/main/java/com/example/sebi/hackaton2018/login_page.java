@@ -14,6 +14,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 
 import Model.APIConnector.APIConnector;
+import Model.DummyData.DummyCreator;
 import Model.User;
 import Model.UserSingleton;
 
@@ -55,7 +56,8 @@ public class login_page extends AppCompatActivity {
         String passWordString = password.getText().toString();
 
         User user = new User(userNameString, passWordString);
-        User foundUser = APIConnector.getUserFromDB(user);
+        //User foundUser = APIConnector.getUserFromDB(user);
+        User foundUser = DummyCreator.getUser();
         if(foundUser == null) {
             Toast.makeText(getApplicationContext(), "Die Userdaten sind nicht korrekt!", Toast.LENGTH_LONG).show();
         }
@@ -87,8 +89,12 @@ public class login_page extends AppCompatActivity {
 
 
     private void switchToMainScreen() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, MainScreen.class);
         startActivity(intent);
     }
 
+    public void switchToRegister(View view) {
+        Intent intent = new Intent(this, register.class);
+        startActivity(intent);
+    }
 }

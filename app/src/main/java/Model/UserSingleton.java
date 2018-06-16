@@ -11,7 +11,7 @@ public class UserSingleton {
 
     }
 
-    public User getInstance(){
+    public static User getInstance(){
         return instance;
     }
 }

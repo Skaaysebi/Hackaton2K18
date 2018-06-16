@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="switchToRegister"
                 android:text="Register" />
 
             <Button
@@ -70,8 +71,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="signin"
                 android:text="Login" />
 
         </LinearLayout>
 
     </LinearLayout>
+</RelativeLayout>
