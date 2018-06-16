@@ -23,7 +23,11 @@
         <activity android:name=".register" />
         <activity android:name=".joboverview_page" />
         <activity android:name=".roomRent" />
-        <activity android:name=".roomDetail"></activity>
+        <activity android:name=".roomDetail" />
+        <activity android:name=".jobDetail" />
+        <activity android:name=".statisticsOverview" />
+        <activity android:name=".erledigteAufgaben" />
+        <activity android:name=".angenommeneAufgaben"></activity>
     </application>
 
 </manifest>
