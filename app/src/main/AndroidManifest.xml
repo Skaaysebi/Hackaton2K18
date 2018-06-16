@@ -27,7 +27,8 @@
         <activity android:name=".jobDetail" />
         <activity android:name=".statisticsOverview" />
         <activity android:name=".erledigteAufgaben" />
-        <activity android:name=".angenommeneAufgaben"></activity>
+        <activity android:name=".angenommeneAufgaben" />
+        <activity android:name=".veranstalltungsInfo"></activity>
     </application>
 
 </manifest>
