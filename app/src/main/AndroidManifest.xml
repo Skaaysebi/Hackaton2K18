@@ -20,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".login_page" />
-        <activity android:name=".register"></activity>
+        <activity android:name=".register" />
+        <activity android:name=".joboverview_page" />
+        <activity android:name=".roomRent" />
+        <activity android:name=".roomDetail"></activity>
     </application>
 
 </manifest>
