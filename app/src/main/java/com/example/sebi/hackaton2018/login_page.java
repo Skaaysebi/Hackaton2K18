@@ -15,6 +15,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 import Model.APIConnector.APIConnector;
 import Model.DummyData.DummyCreator;
@@ -25,11 +27,25 @@ public class login_page extends AppCompatActivity {
 
     private TextView username;
     private TextView password;
+    private TextView cardId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
+
+        //TODO: delete
+        Executor exec = Executors.newFixedThreadPool(3);
+        exec.execute(new Runnable() {
+            @Override
+            public void run() {
+                APIConnector.getUserFromDB(new User("blabla", "adfasd sdfsad", "cardidblabla"));
+                APIConnector.getAllRooms();
+                APIConnector.getAllJobsForUser("261b1d35-3c89-44d1-bfa2-676d18ec01a2");
+                APIConnector.getAllEvents();
+            }
+        });
 
         initFields();
     }
@@ -37,13 +53,15 @@ public class login_page extends AppCompatActivity {
     private void initFields() {
         username = findViewById(R.id.usernameField);
         password = findViewById(R.id.passwortField);
+        cardId = findViewById(R.id.cardNumberField);
     }
 
     public void signin(View view) {
         String userNameString = username.getText().toString();
         String passWordString = password.getText().toString();
+        String cardIdString = cardId.getText().toString();
 
-        User user = new User(userNameString, passWordString);
+        User user = new User(userNameString, passWordString, cardIdString);
         //User foundUser = APIConnector.getUserFromDB(user);
         User foundUser = DummyCreator.getUser();
         if(foundUser == null) {

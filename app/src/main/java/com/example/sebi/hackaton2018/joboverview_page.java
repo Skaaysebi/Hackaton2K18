@@ -28,7 +28,7 @@ public class joboverview_page extends AppCompatActivity {
         setContentView(R.layout.activity_joboverview_page);
 
         TextView points = findViewById(R.id.pointView);
-        int amount = UserSingleton.getInstance().getAmount();
+        int amount = UserSingleton.getInstance().getCredit();
         points.setText((amount+"WüRG"));
         Spinner spinner = findViewById(R.id.kategorySpinner);
 
@@ -86,11 +86,11 @@ public class joboverview_page extends AppCompatActivity {
             TextView responsibleView = view.findViewById(R.id.responsibleView);
             responsibleView.setText(("Verantwortlicher: "+job.getResponsiblePerson()));
             TextView dateView = view.findViewById(R.id.dateView);
-            dateView.setText(("Datum: "+job.getDate()));
+            dateView.setText(("Datum: "+job.getDateTime()));
             TextView rewardView = view.findViewById(R.id.rewardView);
             rewardView.setText(("Entlohnung: "+job.getReward()+" WüRG"));
             Button acceptJob = view.findViewById(R.id.acceptJob);
-            if(job.getWorkerId() == null){
+            if(job.getWorker() == null){
                 acceptJob.setText("Besetzt");
                 acceptJob.setClickable(false);
                 acceptJob.setEnabled(false);

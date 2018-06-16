@@ -24,15 +24,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        Executor exec = Executors.newFixedThreadPool(3);
-        exec.execute(new Runnable() {
-            @Override
-            public void run() {
-                APIConnector.getUserFromDB(new User("blabla", "adfasd sdfsad", "cardidblabla"));
-             APIConnector.getAllRooms();
-            }
-        });
     }
 
     @Override

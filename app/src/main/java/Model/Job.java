@@ -1,7 +1,7 @@
 package Model;
 
 public class Job {
-    private int jobId;
+    private String jobId;
     private String location;
     private String name;
     private String dateTime;
@@ -13,7 +13,7 @@ public class Job {
     public Job() {
     }
 
-    public Job(int jobId, String location, String name, String dateTime, String description, int reward, String responsiblePerson, User worker) {
+    public Job(String jobId, String location, String name, String dateTime, String description, int reward, String responsiblePerson, User worker) {
         this.jobId = jobId;
         this.location = location;
         this.name = name;
@@ -24,11 +24,11 @@ public class Job {
         this.worker = worker;
     }
 
-    public int getJobId() {
+    public String getJobId() {
         return jobId;
     }
 
-    public void setJobId(int jobId) {
+    public void setJobId(String jobId) {
         this.jobId = jobId;
     }
 

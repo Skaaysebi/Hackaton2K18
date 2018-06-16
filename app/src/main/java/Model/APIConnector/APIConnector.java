@@ -90,7 +90,7 @@ public class APIConnector {
         ArrayList<Event> foundEvents = null;
         try {
             if(response.body() != null) {
-                foundEvents = new Genson().deserialize(response.body().toString(), new GenericType<ArrayList<Event>>() {});
+                foundEvents = new Genson().deserialize(response.body().string(), new GenericType<ArrayList<Event>>() {});
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -114,7 +114,7 @@ public class APIConnector {
         ArrayList<Job> foundJobs = null;
         try {
             if(response.body() != null) {
-                foundJobs = new Genson().deserialize(response.body().toString(), new GenericType<ArrayList<Job>>() {});
+                foundJobs = new Genson().deserialize(response.body().string(), new GenericType<ArrayList<Job>>() {});
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -124,9 +124,12 @@ public class APIConnector {
 
     public static List<Job> getAllJobsForUser(String uId){
         List<Job> jobs = getAllJobs();
+        if (jobs == null)
+            return new ArrayList<>();
+
         List<Job> outputJob = new ArrayList<>();
         for(Job job : jobs){
-            if(job.getWorker().getUserId().equals(uId))
+            if(job.getWorker() != null && job.getWorker().getUserId().equals(uId))
                 outputJob.add(job);
         }
         return outputJob;
