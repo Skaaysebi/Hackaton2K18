@@ -9,7 +9,7 @@ import Model.User;
 public class DummyCreator {
     public static ArrayList<Job> getSomeJobs(){
         ArrayList<Job> jobs = new ArrayList<>();
-        jobs.add(new Job(1, "Sanderring", "Bäume pflanzen", "10.7.18 7:30", "Jemand muss 5 Bäume am Sanderring pflanzen", 300, "Larry Lobster"));
+        jobs.add(new Job(1, "Sanderring", "Bäume pflanzen", "10.7.18 7:30", "Jemand muss 5 Bäume am Sanderring pflanzen", 300, "Larry Lobster", null));
         return jobs;
     }
 
