@@ -4,39 +4,24 @@ public class Job {
     private int jobId;
     private String location;
     private String name;
-    private String date;
+    private String dateTime;
     private String description;
     private int reward;
     private String responsiblePerson;
-    private String workerId;
+    private User worker;
 
-    public Job(int jobId, String location, String name, String date, String description, int reward, String responsiblePerson) {
+    public Job() {
+    }
+
+    public Job(int jobId, String location, String name, String dateTime, String description, int reward, String responsiblePerson, User worker) {
         this.jobId = jobId;
         this.location = location;
         this.name = name;
-        this.date = date;
+        this.dateTime = dateTime;
         this.description = description;
         this.reward = reward;
         this.responsiblePerson = responsiblePerson;
-    }
-
-    public Job(int jobId, String location, String name, String date, String description, int reward, String responsiblePerson, String workerId) {
-        this.jobId = jobId;
-        this.location = location;
-        this.name = name;
-        this.date = date;
-        this.description = description;
-        this.reward = reward;
-        this.responsiblePerson = responsiblePerson;
-        this.workerId = workerId;
-    }
-
-    public String getWorkerId() {
-        return workerId;
-    }
-
-    public void setWorkerId(String workerId) {
-        this.workerId = workerId;
+        this.worker = worker;
     }
 
     public int getJobId() {
@@ -63,12 +48,12 @@ public class Job {
         this.name = name;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateTime() {
+        return dateTime;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDateTime(String dateTime) {
+        this.dateTime = dateTime;
     }
 
     public String getDescription() {
@@ -93,5 +78,13 @@ public class Job {
 
     public void setResponsiblePerson(String responsiblePerson) {
         this.responsiblePerson = responsiblePerson;
+    }
+
+    public User getWorker() {
+        return worker;
+    }
+
+    public void setWorker(User worker) {
+        this.worker = worker;
     }
 }
