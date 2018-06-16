@@ -7,13 +7,21 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="113dp"
-        android:orientation="horizontal">
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/roomImage"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@mipmap/ic_launcher" />
 
@@ -27,19 +35,15 @@
                 android:id="@+id/roomtitleView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="30sp" />
 
             <TextView
-                android:id="@+id/roomDescriptionView"
+                android:id="@+id/roomLocationView"
                 android:layout_width="match_parent"
-                android:layout_height="61dp"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/roomSizeView"
-                android:layout_width="match_parent"
-                android:layout_height="75dp"
-                android:text="TextView" />
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,29 +53,25 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/roomlocationView"
+                android:id="@+id/roomtimeView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/roomResponsiblePersonView"
+                android:id="@+id/roompersonView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/roomPriceView"
+                android:id="@+id/priceView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <Button
-                android:id="@+id/reservateRoom"
-                android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:onClick="reservate"
-                android:text="Reservieren" />
+                android:text="TextView"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
