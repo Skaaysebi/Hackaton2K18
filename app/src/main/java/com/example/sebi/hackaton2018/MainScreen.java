@@ -12,21 +12,25 @@ public class MainScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
-
-        //öffne FreeActivity
-        ImageView freeActivity = (ImageView) findViewById(R.id.free);
-        freeActivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFreeActivity();
-            }
-        });
     }
 
-
-
-    private void openFreeActivity(){
+    public void switchToFree(View view){
         Intent intent = new Intent(this, FreeActivity.class);
+        startActivity(intent);
+    }
+
+    public void switchToJobs(View view){
+        Intent intent = new Intent(this, JobsActivity.class);
+        startActivity(intent);
+    }
+
+    public void switchToRoomRent(View view){
+        Intent intent = new Intent(this, roomRent.class);
+        startActivity(intent);
+    }
+
+    public void switchToStatistik(View view){
+        Intent intent = new Intent(this, statisticsOverview.class);
         startActivity(intent);
     }
 }
