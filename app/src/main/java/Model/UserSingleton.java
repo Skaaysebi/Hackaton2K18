@@ -7,8 +7,8 @@ public class UserSingleton {
 
     }
 
-    public static void initInstance(String userString){
-
+    public static void initInstance(User user){
+        instance = user;
     }
 
     public static User getInstance(){

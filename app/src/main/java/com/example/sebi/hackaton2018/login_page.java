@@ -10,8 +10,11 @@ import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 
 import Model.APIConnector.APIConnector;
 import Model.DummyData.DummyCreator;
@@ -29,21 +32,6 @@ public class login_page extends AppCompatActivity {
         setContentView(R.layout.activity_login_page);
 
         initFields();
-        try {
-            checkIfUserIsLoggedIn();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void checkIfUserIsLoggedIn() throws Exception{
-        if(fileExist("login")){
-            File file = new File(getApplicationContext().getFilesDir(), "login");
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String userInfo = reader.readLine();
-            UserSingleton.initInstance(userInfo);
-            switchToMainScreen();
-        }
     }
 
     private void initFields() {
@@ -62,29 +50,9 @@ public class login_page extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Die Userdaten sind nicht korrekt!", Toast.LENGTH_LONG).show();
         }
         else {
-            FileOutputStream outputStream;
-            if(fileExist("login")){
-                try {
-                    StringBuffer fileContents = new StringBuffer();
-                    fileContents.append(foundUser.getUsername()).append(" ")
-                            .append(foundUser.getPassword()).append(" ")
-                            .append(foundUser.getCardId()).append(" ")
-                            .append(foundUser.isAdmin()).append(" ")
-                            .append(foundUser.getAmount());
-                    outputStream = openFileOutput("login", Context.MODE_PRIVATE);
-                    outputStream.write(fileContents.toString().getBytes());
-                    outputStream.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            UserSingleton.initInstance(foundUser);
             }
             switchToMainScreen();
-        }
-    }
-
-    private boolean fileExist(String fname){
-        File file = getBaseContext().getFileStreamPath(fname);
-        return file.exists();
     }
 
 

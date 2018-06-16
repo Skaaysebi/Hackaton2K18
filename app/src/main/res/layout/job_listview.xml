@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="131dp"
+        android:layout_height="201dp"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
@@ -23,16 +23,16 @@
             <TextView
                 android:id="@+id/titleView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="56dp"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textAlignment="center"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/responsibleView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="47dp"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textAlignment="center"
@@ -41,7 +41,7 @@
             <TextView
                 android:id="@+id/locationView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="43dp"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textAlignment="center"
@@ -50,7 +50,7 @@
             <TextView
                 android:id="@+id/descriptionView"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="60dp"
                 android:layout_weight="1"
                 android:text="TextView"
                 android:textAlignment="center"
