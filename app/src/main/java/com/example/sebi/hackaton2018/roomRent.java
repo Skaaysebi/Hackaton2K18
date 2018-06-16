@@ -72,9 +72,9 @@ public class roomRent extends AppCompatActivity {
             TextView roomSizeView = view.findViewById(R.id.roomSizeView);
             roomSizeView.setText(("Größe: "+room.getSize()+"m"));
             TextView roomPriceView = view.findViewById(R.id.roomPriceView);
-            roomPriceView.setText(("Preis: "+room.getPrice()+" WüRG"));
+            roomPriceView.setText(("Preis: "+room.getCost()+" WüRG"));
             Button reservateRoom = view.findViewById(R.id.reservateRoom);
-            if(room.getUser() != null){
+            if(room.getBooker() != null){
                 reservateRoom.setText("Besetzt");
                 reservateRoom.setClickable(false);
                 reservateRoom.setEnabled(false);

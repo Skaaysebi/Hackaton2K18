@@ -43,7 +43,7 @@ public class login_page extends AppCompatActivity {
         String userNameString = username.getText().toString();
         String passWordString = password.getText().toString();
 
-        User user = new User(userNameString, passWordString);
+        User user = new User(userNameString, passWordString, "253674859");
         //User foundUser = APIConnector.getUserFromDB(user);
         User foundUser = DummyCreator.getUser();
         if(foundUser == null) {

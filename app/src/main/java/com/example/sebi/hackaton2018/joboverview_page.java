@@ -28,7 +28,7 @@ public class joboverview_page extends AppCompatActivity {
         setContentView(R.layout.activity_joboverview_page);
 
         TextView points = findViewById(R.id.pointView);
-        int amount = UserSingleton.getInstance().getAmount();
+        int amount = UserSingleton.getInstance().getCredit();
         points.setText((amount+"WüRG"));
         Spinner spinner = findViewById(R.id.kategorySpinner);
 

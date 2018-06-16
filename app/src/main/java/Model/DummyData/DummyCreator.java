@@ -15,11 +15,11 @@ public class DummyCreator {
 
     public static ArrayList<Room> getSomeRooms(){
         ArrayList<Room> rooms = new ArrayList<>();
-        rooms.add(new Room("H.1.1","FHWS","324567",4,"Gert","Ein Hörsaal",null,30));
+        rooms.add(new Room("H.1.1","FHWS",3,"Bla","Gert","Ein Hörsaal",null,30));
         return rooms;
     }
 
     public static User getUser() {
-        return new User("Heinz", "Ketchup","5679T",false,3000);
+        return new User("526347", "Heinz", "Ketchup","5679T",3000, false);
     }
 }
