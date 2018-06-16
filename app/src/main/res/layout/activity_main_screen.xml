@@ -51,10 +51,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
         android:layout_marginEnd="60dp"
+        android:onClick="switchToRoomRent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/free"
@@ -62,10 +63,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
         android:layout_marginStart="60dp"
+        android:onClick="switchToFree"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/statistik"
@@ -73,6 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
         android:layout_marginEnd="60dp"
+        android:onClick="switchToStatistik"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round"
@@ -84,10 +87,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="200dp"
         android:layout_marginStart="60dp"
+        android:onClick="switchToJobs"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/ic_launcher_round"
-        tools:ignore="ContentDescription"/>
+        tools:ignore="ContentDescription" />
 
     //Fügt zweites Layout hinzu
     <include layout="@layout/bottom_menu_line"/>
