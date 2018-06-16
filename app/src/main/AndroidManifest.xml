@@ -19,27 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".VerdienenActivity"
-            android:label="@string/title_activity_verdienen"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".JobsActivity"
-            android:label="@string/title_activity_jobs"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".JobDeteilActivity"
-            android:label="@string/title_activity_job_deteil"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity android:name=".login_page" />
         <activity android:name=".register" />
         <activity android:name=".joboverview_page" />
         <activity android:name=".roomRent" />
-        <activity android:name=".roomDetail"></activity>
+        <activity android:name=".roomDetail" />
+        <activity android:name=".jobDetail" />
+        <activity android:name=".statisticsOverview" />
+        <activity android:name=".erledigteAufgaben" />
+        <activity android:name=".angenommeneAufgaben" />
+        <activity android:name=".veranstalltungsInfo"></activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
@@ -55,9 +44,11 @@
         <activity
             android:name=".JobDeteilActivity"
             android:label="@string/title_activity_job_deteil"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".login_page" />
-        <activity android:name=".register"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".FreeActivity"
+            android:label="@string/title_activity_free"></activity>
     </application>
 
 </manifest>
